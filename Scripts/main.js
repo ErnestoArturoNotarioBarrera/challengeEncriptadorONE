@@ -3,7 +3,11 @@ const letrasEncriptadas = {
 	"i": "imes",
 	"a": "ai",
 	"o": "ober",
-	"u": "ufat"
+	"u": "ufat",
+	"s": "sop",
+	"d": "dio",
+	"r": "rdo",
+	"n": "nim"
 };
 
 const letrasDesencriptadas = {
@@ -11,7 +15,11 @@ const letrasDesencriptadas = {
 	'imes': 'i',
 	'ai': 'a',
 	'ober': 'o',
-	'ufat': 'u'
+	'ufat': 'u',
+	'sop': 's',
+	'dio': 'd',
+	'rdo': 'r',
+	'nim': 'n'
 }
 
 function validarEntrada(texto) {
@@ -48,19 +56,26 @@ function encriptar() {
 		return "";
 	}
 
-	let resultado = texto.replace(/[aeiou]/g, function ([aeiou]) {
-		return letrasEncriptadas[aeiou];
+	let resultado = texto.replace(/[aeiousdrn]/g, function ([aeiousdrn]) {
+		return letrasEncriptadas[aeiousdrn];
 	});
 
 	return resultado;
 }
 
 function desencriptarTexto(texto) {
-	let textoDesencriptado = texto.replace(/enter/g, "e")
+	let textoDesencriptado = texto.replace(/sop/g, "s")
+		.replace(/dio/g, "d")
+		.replace(/rdo/g, "r")
+		.replace(/nim/g, "n")
+		.replace(/enter/g, "e")
 		.replace(/imes/g, "i")
 		.replace(/ai/g, "a")
 		.replace(/ober/g, "o")
-		.replace(/ufat/g, "u");
+		.replace(/ufat/g, "u")
+;
+	
+	
 
 	return textoDesencriptado;
 }
