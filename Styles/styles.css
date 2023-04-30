@@ -1,36 +1,48 @@
-body {
-	box-sizing: border-box;
-	background-color: #0aa831;
-	background-image: linear-gradient(to right, #20c20e, #0f7134, );
-	background-size: 700%;
-	transition: background-position 1s;
-	width: 100%;
-	height: 100%;
+html {
+	background-color: #0f7134;
 }
 
 h1 {
 	color: white;
-	margin-left: 20px;
-	size: 80px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.mensaje-principal {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
 }
 
 h2 {
+	position: relative;
 	text-align: center;
 	size: 50px;
 	padding: 5px;
 	background-color: #cccccc;
-	width: 1060px;
+	width: 100%;
 }
 
 .alura {
 	vertical-align: middle;
 }
 
+nav {
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+}
+
+nav button {
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+
 #encriptar {
-	margin-left: 20px;
 	font-size: 20px;
 	font-family: 'Times New Roman', Times, serif;
-	display: inline-block;
 	padding: 10px;
 }
 
@@ -40,10 +52,8 @@ h2 {
 }
 
 #desencriptar {
-	margin-left: 20px;
 	font-size: 20px;
 	font-family: 'Times New Roman', Times, serif;
-	display: inline-block;
 	padding: 10px;
 }
 
@@ -53,10 +63,8 @@ h2 {
 }
 
 #limpiar {
-	margin-left: 20px;
 	font-size: 20px;
 	font-family: 'Times New Roman', Times, serif;
-	display: inline-block;
 	padding: 10px;
 }
 
@@ -66,17 +74,19 @@ h2 {
 }
 
 #copiar {
-	position: absolute;
-	margin-left: 380px;
 	font-size: 20px;
 	font-family: 'Times New Roman', Times, serif;
-	display: inline-block;
 	padding: 10px;
 }
 
 #copiar img {
 	height: 1.5em;
 	margin-right: 5px;
+}
+
+main {
+	position: relative;
+	text-align: center;
 }
 
 #zona-encriptar {
@@ -87,10 +97,8 @@ h2 {
 
 #texto {
 	width: 100%;
-	height: 100%;
-	height: 100%;
 	padding: 20px 20px;
-	margin-left: 20px;
+	margin: 0 auto;
 	font-size: 20px;
 }
 
@@ -99,17 +107,12 @@ h2 {
 	width: 440px;
 	height: 300px;
 	background-color: beige;
-	margin-left: 120px;;
+	margin-left: 120px;
 	position: relative;
 }
 
 .contenedor-texto {
 	position: relative;
-}
-
-#seccion{
-	width: 100%;
-	height: 100%;
 }
 
 #resultado {
@@ -130,45 +133,97 @@ h2 {
 
 ::placeholder {
 	font-size: 20px;
-	font-weight: 500;
 }
 
 #final {
-	height: 40px;
+	text-align: center;
 	background-color: bisque;
 	padding: 10px 10px;
 	vertical-align: top;
-	width: 1060px;
+	width: 100%;
 }
 
 h3 {
 	display: inline-block;
-	vertical-align: top;
 }
 
 a img {
 	display: inline-block;
-	height: 100%;
+	height: 50px;
 }
 
 a {
-	margin-left: 20px;
+	margin: 0 auto
 }
 
 #footer {
 	height: 100%;
 	display: inline-block;
-	vertical-align: top;
 }
 
 #footer2 {
-	height: 100%;
 	display: inline-flex;
-	vertical-align: 0%;
+	vertical-align: top;
 }
 
 
 h4 {
 	display: inline-block;
-	margin-left: 20px;
+	position: relative;
+}
+
+@media screen and (max-width: 768px) {
+	#zona-encriptar {
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	#contenedor-global {
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	nav {
+		width: 100%;
+		margin: 0 0 10px 10px;
+	}
+
+	nav button {
+		margin: 0 0 10px 10px;
+		text-align: center;
+	}
+
+	#encriptar {
+		margin: 0 10px 5px 0;
+		text-align: center;
+	}
+
+	#limpiar {
+		margin: 5px 0 10px 0;
+		text-align: center;
+	}
+
+	footer {
+		width: 100%;
+		position: relative;
+		height: 150px;
+	}
+
+	h3 {
+		text-align: center;
+		position: relative;
+		display: inline-block;
+	}
+
+	#footer {
+		width: 100%;
+		position: relative;
+		display: inline-block;
+	}
+
+	#footer~a {
+		position: relative;
+		display: inline-block;
+	}
+
 }
