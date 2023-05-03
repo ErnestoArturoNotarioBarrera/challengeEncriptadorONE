@@ -64,21 +64,19 @@ function encriptar() {
 }
 
 function desencriptarTexto(texto) {
-	let textoDesencriptado = texto.replace(/sop/g, "s")
-		.replace(/dio/g, "d")
-		.replace(/rdo/g, "r")
-		.replace(/nim/g, "n")
-		.replace(/enter/g, "e")
-		.replace(/imes/g, "i")
-		.replace(/ai/g, "a")
-		.replace(/ober/g, "o")
-		.replace(/ufat/g, "u")
-;
-	
-	
+  let textoDesencriptado = texto.replace(/ufat/g, "u")
+    .replace(/ober/g, "o")
+    .replace(/ai/g, "a")
+    .replace(/imes/g, "i")
+    .replace(/enter/g, "e")
+    .replace(/nim/g, "n")
+    .replace(/rdo/g, "r")
+    .replace(/dio/g, "d")
+    .replace(/sop/g, "s");
 
-	return textoDesencriptado;
+  return textoDesencriptado;
 }
+
 
 function procesarEncriptar() {
 	const entrada = document.getElementById("texto").value.trim();
